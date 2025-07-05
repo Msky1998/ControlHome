@@ -36,24 +36,3 @@ export async function POST(req: NextRequest) {
     );
   }
 }
-export async function POST(req: NextRequest) {
-  try {
-    const { name, description } = await req.json();
-
-    if (!name && !description) {
-      return NextResponse.json({
-        error: "name et description doivent etre non nul",
-      });
-    }
-    const newTask = await prisma.task.create({
-      data: { name, description },
-    });
-    return NextResponse.json(newTask, { status: 201 });
-  } catch (error) {
-    console.error("Error adding task:", error);
-    return NextResponse.json(
-      { error: "Failed to add task " + error },
-      { status: 500 }
-    );
-  }
-}
