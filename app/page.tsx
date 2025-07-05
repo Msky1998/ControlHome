@@ -8,13 +8,12 @@ export default async function Home() {
   
   return (
    <section className="p-8">
-    {!data &&
+    {data == null ?
     <>
     <VoidComponent/>
     </>
-    }
-    {data &&
-        <CarteInfos temperature={data.temperature} smoke={data.smoke} flame={data.flame} alert={data.alert}/>
+    :
+    <CarteInfos temperature={data.temperature} smoke={data.smoke} flame={data.flame} alert={data.alert}/>
     }
    </section>
   );
