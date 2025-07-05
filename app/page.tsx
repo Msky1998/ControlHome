@@ -8,7 +8,6 @@ export default async function Home() {
   
   return (
    <section className="p-8">
-    Tonton
     {!data &&
     <>
     <VoidComponent/>
@@ -20,3 +19,5 @@ export default async function Home() {
    </section>
   );
 }
+
+

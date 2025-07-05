@@ -11,7 +11,7 @@ export default function Navbar() {
     <div className="container mx-auto flex justify-between items-center">
       <Link href="/" className="text-white text-2xl font-bold flex items-baseline gap-2">
       <Home/>
-        Control House
+        Home Control
       </Link>
       <ModeToggle/>
     </div>

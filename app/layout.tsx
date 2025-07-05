@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Control House",
+  title: "Home Control",
   description: "Votre assistant qui protege votre maison",
 };
 
